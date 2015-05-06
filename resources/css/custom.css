@@ -1,0 +1,316 @@
+/*
+ * Globals
+ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+  margin-right: 0 !important;
+  padding: 0;
+  /* Margin bottom by footer height */
+  margin-bottom: 160px;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/*
+ * Masthead for nav
+ */
+
+ /* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.blog-navbar {
+  background: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  border: none;
+}
+
+.blog-navbar.navbar-static-top {
+  margin-bottom: 0;
+}
+
+.blog-navbar .navbar-brand,
+.blog-navbar .navbar-brand:visited {
+  color: #fff;
+}
+
+.blog-navbar .nav li a {
+  color: #cdddeb ;
+  background: none !important;
+}
+
+.blog-navbar .nav li a:hover,
+.blog-navbar .nav li a:focus{
+  color: #fff !important;
+  text-decoration: none;
+  background: none;
+}
+
+.blog-navbar .nav li.active a,
+.blog-navbar .nav li.active a:hover{
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-navbar .nav li.active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+  color: #003366;
+}
+
+.navbar-toggle {
+  background-color: #ddd;
+}
+
+.blog-navbar .navbar-collapse {
+  border: none;
+}
+
+.blog-navbar .navbar-collapse ul {
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .blog-navbar .nav li.active:after {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid;
+    vertical-align: middle;
+    left: 5px;
+    top: 50%;
+    margin-top: -5px;
+    color: #428bca;
+  }
+
+  .blog-navbar .nav li.active,
+  .blog-navbar .nav li.active a {
+    background: #003366 !important;
+  }
+}
+
+/* Active state links get bold */
+.navbar-wrapper li.active a {
+  font-weight: 800;
+}
+
+/*
+ * Carousel
+ */
+
+/* Carousel base class */
+.carousel {
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  position: static;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  background-color: #003366;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 160px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer .container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.footer img {
+  max-width: 100px;
+}
+
+/*
+ * Others
+ */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.back-to-top {
+  z-index: 21;
+  position: fixed;
+  bottom: 2em;
+  right: 0px;
+  text-decoration: none;
+  color: #000000;
+  background-color: rgba(200, 200, 200, 0.90);
+  font-size: 12px;
+  padding: 1em;
+  display: none;
+  font-size: 1.4em;
+}
+
+.back-to-top:hover {    
+  background-color: rgba(135, 135, 135, 0.50);
+}
+
+@media (max-width: 767px) {
+  .back-to-top {
+    font-size: 1em;
+  }
+}
+
+/*
+ * Home code
+ */
+
+.home-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.home-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 45px;
+  font-weight: normal;
+  color: #fff;
+}
+.home-description {
+  font-size: 20px;
+  color: #fff;
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+.home-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.home-main, .home-sidebar {
+  margin-top: 30px;
+}
+
+/* Sidebar modules for boxing content */
+.home-sidebar .sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.home-sidebar .sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.home-sidebar .sidebar-module-inset p:last-child,
+.home-sidebar .sidebar-module-inset ul:last-child,
+.home-sidebar .sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Blog posts
+ */
+
+.home-post {
+  margin-bottom: 60px;
+}
+.home-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.home-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.home-code { 
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  margin-top: 25px;
+}
+
+.home-code div {
+  clear: both;
+  margin: auto;
+  text-align: center;
+}
+
+.home-code i {
+  margin-top: 25%;
+}
+
+/*
+ * Projects code
+ */
+
+.projects-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+  text-align: left;
+  color: #fff;
+}
+.projects-post-meta {
+  color: #fff;
+  font-size: 25px;
+  text-align: left;
+}
