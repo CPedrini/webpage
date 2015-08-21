@@ -1,316 +1,405 @@
-/*
- * Globals
- */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+/* Layout
+-------------------------------------------------- */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
-  margin-right: 0 !important;
-  padding: 0;
-  /* Margin bottom by footer height */
-  margin-bottom: 160px;
+  position: relative;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
-}
-
-
-/*
- * Override Bootstrap's default container.
- */
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-/*
- * Masthead for nav
- */
-
- /* Special class on .container surrounding .navbar, used for positioning it into place. */
-
-.blog-navbar {
-  background: #428bca;
-  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-  border: none;
-}
-
-.blog-navbar.navbar-static-top {
+/* Header
+------------------------- */
+.jumbotron {
+  border-radius: 0px;
+  background: #5fb3ce;
   margin-bottom: 0;
 }
 
-.blog-navbar .navbar-brand,
-.blog-navbar .navbar-brand:visited {
+.jumbotron {
+  position: relative;
+  padding: 20px 0;
   color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  background: #00699e; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #000c12 0%, #006ea5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#000c12), color-stop(100%,#006ea5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #000c12 0%,#006ea5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #000c12 0%,#006ea5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #000c12 0%,#006ea5 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #000c12 0%,#006ea5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000c12', endColorstr='#006ea5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
-.blog-navbar .nav li a {
-  color: #cdddeb ;
-  background: none !important;
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
-.blog-navbar .nav li a:hover,
-.blog-navbar .nav li a:focus{
-  color: #fff !important;
-  text-decoration: none;
-  background: none;
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 30px;
 }
 
-.blog-navbar .nav li.active a,
-.blog-navbar .nav li.active a:hover{
-  color: #fff;
+/* Right column
+------------------------- */
+.row {
+  margin: 0;
+}
+
+section {
+  padding: 10px 0;
+}
+
+section > .page-header,
+section > .lead {
+  color: #00537d;
+}
+section > ul li {
+  margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+.separator {
+  margin: 40px 0 39px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 40px;
   font-weight: bold;
 }
 
-/* Active state gets a caret at the bottom */
-.blog-navbar .nav li.active:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -5px;
-  vertical-align: middle;
-  content: " ";
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid;
-  border-left: 5px solid transparent;
-  color: #003366;
-}
-
-.navbar-toggle {
-  background-color: #ddd;
-}
-
-.blog-navbar .navbar-collapse {
-  border: none;
-}
-
-.blog-navbar .navbar-collapse ul {
-  margin-top: 0;
-}
-
-@media (max-width: 767px) {
-  .blog-navbar .nav li.active:after {
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid;
-    vertical-align: middle;
-    left: 5px;
-    top: 50%;
-    margin-top: -5px;
-    color: #428bca;
-  }
-
-  .blog-navbar .nav li.active,
-  .blog-navbar .nav li.active a {
-    background: #003366 !important;
-  }
-}
-
-/* Active state links get bold */
-.navbar-wrapper li.active a {
-  font-weight: 800;
-}
-
-/*
- * Carousel
- */
-
-/* Carousel base class */
-.carousel {
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-  position: static;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  background-color: #003366;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
-/*
- * Footer
- */
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 160px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e5e5e5;
-}
-
-.footer .container .text-muted {
-  margin: 20px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 15px;
-  max-width: 400px;
-  text-align: center;
-}
-
-.footer img {
-  max-width: 100px;
-}
-
-/*
- * Others
- */
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.back-to-top {
-  z-index: 21;
-  position: fixed;
-  bottom: 2em;
-  right: 0px;
-  text-decoration: none;
-  color: #000000;
-  background-color: rgba(200, 200, 200, 0.90);
-  font-size: 12px;
-  padding: 1em;
-  display: none;
-  font-size: 1.4em;
-}
-
-.back-to-top:hover {    
-  background-color: rgba(135, 135, 135, 0.50);
-}
-
-@media (max-width: 767px) {
-  .back-to-top {
-    font-size: 1em;
-  }
-}
-
-/*
- * Home code
- */
-
-.home-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.home-title {
-  margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 45px;
-  font-weight: normal;
-  color: #fff;
-}
-.home-description {
+h3 {
   font-size: 20px;
+  line-height: 40px;
+  font-weight: normal;
+  color: #454545;
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Left column
+------------------------- */
+#nav-menu {
+  margin: 20px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+
+#nav-menu > li {
+  margin: 0;
+}
+
+#nav-menu > li > a {
+  display: block;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+#nav-menu > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+#nav-menu > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+#nav-menu > li.active > a {
+  position: relative;
+  z-index: 2;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
   color: #fff;
+  background-color: #006EA5;
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
 }
-
-/*
- * Main column and sidebar layout
- */
-
-.home-main {
-  font-size: 18px;
-  line-height: 1.5;
+/* Chevrons */
+#nav-menu .glyphicon {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
 }
-
-.home-main, .home-sidebar {
-  margin-top: 30px;
-}
-
-/* Sidebar modules for boxing content */
-.home-sidebar .sidebar-module {
-  padding: 15px;
-  margin: 0 -15px 15px;
-}
-.home-sidebar .sidebar-module-inset {
-  padding: 15px;
+#nav-menu > li > a:hover {
   background-color: #f5f5f5;
-  border-radius: 4px;
 }
-.home-sidebar .sidebar-module-inset p:last-child,
-.home-sidebar .sidebar-module-inset ul:last-child,
-.home-sidebar .sidebar-module-inset ol:last-child {
+#nav-menu > li.active > a:hover {
+  background-color: #006EA5;
+}
+#nav-menu a:hover .glyphicon {
+  opacity: .5;
+}
+#nav-menu .active .glyphicon,
+#nav-menu .active a:hover .glyphicon {
+  /*background-image: url(../img/glyphicons-halflings-white.png);*/
+  opacity: 1;
+}
+
+.affix-top {
+  position: relative;
+}
+
+.affix,
+.affix-top {
+  top: 0px;
+}
+
+#nav-menu {
+  width: 100%;
+}
+
+.affix-bottom {
+  position: absolute;
+}
+
+/* Footer
+------------------------- */
+.footer {
+  padding: 70px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
   margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
 }
 
-/*
- * Blog posts
- */
+/* Responsive
+-------------------------------------------------- */
 
-.home-post {
-  margin-bottom: 60px;
-}
-.home-post-title {
-  margin-bottom: 5px;
-  font-size: 40px;
-}
-.home-post-meta {
-  margin-bottom: 20px;
-  color: #999;
-}
+/* Phone to tablet
+------------------------- */
+@media (max-width: 768px) {
+  #nav-menu {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
 
-.home-code { 
-  background: #fff;
-  width: 150px;
-  height: 150px;
-  margin-top: 25px;
-}
+  body {
+    padding-top: 0;
+  }
 
-.home-code div {
-  clear: both;
-  margin: auto;
-  text-align: center;
+  .jumbotron {
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+  }
+
+  .sidebar.affix {
+    top: 0;
+  }
 }
 
-.home-code i {
-  margin-top: 25%;
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  #nav-menu {
+    max-width: 150px;
+  }
 }
 
-/*
- * Projects code
- */
-
-.projects-post-title {
-  margin-bottom: 5px;
-  font-size: 40px;
-  text-align: left;
-  color: #fff;
+/* Desktop to large desktop
+------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #nav-menu {
+    max-width: 200px;
+  }
 }
-.projects-post-meta {
-  color: #fff;
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  #nav-menu {
+    max-width: 250px;
+  }
+}
+
+/* Content specific
+-------------------------------------------------- */
+
+/* Home
+------------------------- */
+#home {
+  padding: 30px;
+  margin-bottom: 0px;
+  background-color: #EEE;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#home .photo {
+  float: right;
+  max-width: 100%;
+  margin-bottom: 25px;
+  padding: 4px;
+  background: #FFF none repeat scroll 0% 0%;
+  border: 1px solid #DDD;
+  border-radius: 14px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.055);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+#home .info,
+#home .contact {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+#home li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit;
+  margin-left: -10px;
+}
+
+#home li.name {
   font-size: 25px;
-  text-align: left;
+}
+
+#home li.name-alt {
+  font-weight: bold;
+}
+
+#home .glyphicon {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* About
+------------------------- */
+#about .areas {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#about .areas blockquote {
+  font-size: 14px;
+  font-family: "Raleway",sans-serif;
+}
+
+/* Projects
+------------------------- */
+#projects .item {
+  display: table;
+}
+
+#projects .image {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+#projects .item .image img {
+  width: 120px;
+  background: #dedede;
+  float: left;
+}
+
+#projects .text {
+  display: table-cell;
+}
+
+#projects .text .links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#projects .text .links li {
+  font-size: 15px;
+  font-weight: 600;
+  display: inline;
+  padding-right: 10px;
+}
+
+#projects .text .links a {
+  color: #333333;
+}
+
+#projects .text .links a:hover {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+  #projects .item,
+  #projects .item .image,
+  #projects .item .text {
+    display: block;
+    width: 100%;
+  }
+
+  #projects .item .image img {
+    float: none;
+  }
+}
+
+/* Resources
+------------------------- */
+#resources .links {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+#resources .links li {
+  font-size: 14px;
+  display: inline;
+  padding-right: 10px;
+}
+
+#resources .links a {
+  color: #333333;
+}
+
+#resources .links a:hover {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+/* Contact
+------------------------- */
+#contact .info {
+  list-style-type: none;
+  padding-left: 0;
 }

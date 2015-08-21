@@ -11,16 +11,22 @@
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
 
+    <!-- Icons -->
     <link rel="icon" href="resources/images/favicon.ico">
+    <link rel="shortcut icon" href="resources/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles -->
     <link href="resources/css/custom.css" rel="stylesheet">
 
     <!-- Font awesome styles -->
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,134 +35,282 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="body">
-    <nav class="navbar navbar-default navbar-static-top blog-navbar" role="navigation">
+  <body data-spy="scroll" data-target=".scrollspy" data-offset="260">
+    <header class="jumbotron subhead">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Pedrini Ciro's website</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <header class="carousel">
-      <div class="carousel-inner">
-        <div class="item active">
-          <div class="container">
-            <div class="img-circle center-block home-code" onclick="$(this).hide();">
-              <div>
-                <i class="fa fa-code fa-5x fa-fw"></i>
-              </div>
-            </div>
-            <div class="carousel-caption home-header">
-              <h1 class="home-title">LOOKING FOR A DEVELOPER?</h1>
-              <p class="home-description">I'M A DEVELOPER &amp; PROGRAMMER LIVING IN ROSARIO, SANTA FÉ, ARGENTINA<br/>
-                 I MAKE WEB AND DESKTOP APPLICATIONS</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+        <h1>Ciro Pedrini</h1>
+        <p class="lead">Engineering student in information systems at National Technological University.</p>
+      </div><!--/container-->
+    </header><!--/jumbotron-->
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 home-main">
-          <div class="home-post">
-            <h2 class="home-post-title">My skills</h2>
-            <p>I primarily use <strong>Python</strong> and <strong>C# .NET</strong>, but picking up a new framework or language isn't a problem, i am always anxious for learn something new. I have extensive programming experience and am comfortable with the developing on the front-end or back-end as well as setting up, managing and maintain the infrastructure.</p>
+        <div class="col-sm-3 col-lg-3 scrollspy">
+          <ul id="nav-menu" class="nav nav-stacked" data-spy="affix">
+            <li class="active">
+              <a href="#home">
+                Home <i class="glyphicon glyphicon-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                About <i class="glyphicon glyphicon-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                Projects <i class="glyphicon glyphicon-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#resources">
+                Resources <i class="glyphicon glyphicon-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                Contact <i class="glyphicon glyphicon-chevron-right"></i>
+              </a>
+            </li>
+          </ul><!--/nav-->
+        </div><!--/col-->
+
+        <div class="col-sm-9 col-lg-9">
+          <!-- Home
+          ================================================== -->
+          <section id="home">
+            <div class="home">
+              <img src="resources/images/profile.png" class="photo" alt="Portrait" />
+
+              <ul class="info">
+                <li class="name">Ciro Pedrini</li>
+                <li>Engineering student in information systems</li>
+                <li>At the Rosario regional <a href="http://www.frro.utn.edu.ar/" target="_blank">National Technological University</a></li>
+              </ul>
+
+              <ul class="contact">
+                <li><i class="glyphicon glyphicon-home"></i> Location: Rosario, Santa F&eacute;, Argentina</li>
+                <li><i class="glyphicon glyphicon-envelope"></i> Email: <a href="mailto:ciro.pedrini@gmail.com">ciro.pedrini@gmail.com</a></li>
+                <li><i class="glyphicon glyphicon-phone"></i> Phone: +54 341 15-3188-464</li>
+              </ul>
+
+              <div class="clearfix"></div>
+            </div><!--/home-->
+          </section>
+
+          <!-- About
+          ================================================== -->
+          <section id="about">
+            <div class="page-header">
+              <h1>About</h1>
+            </div>
+
+            <h2>Introduction</h2>
+            <p>Ciro Pedrini, also known as the "stone guy", is a programmer &amp; developer.</p>
+
+            <p>From child he was fascinated for computers and since my father's job treats with them I used computers since I were a child. At the age of 13 I discovered the world of programming, and since then I continually do programming as a pleasant activity.</p>
+
+            <p>Resides in Rosario where he studies, alone, but he manages to travel almost every weekend to his family's home in the town.</p>
+
+            <p>His hobbies are principally to play PC games, watch movies &amp; series, listen his music favorite bands and the programming itself.</p>
+
+            <h2>My skills</h2>
+            <p>I primarily use Python and C# .NET, but picking up a new framework or language isn't a problem, i am always anxious for learn something new. I have extensive programming experience and am comfortable with the developing on the front-end or back-end as well as setting up, managing and maintain the infrastructure.</p>
+
+            <h3>Main areas of expertise</h3>
+
+            <p><b>Backend development:</b> My best skills are in .NET and its associated platform stack, but i am anyways good skilled in PHP and Django, in conjunction with DBs such as MySQL and PostgreSQL. I'm comfortable with using all of this tools for all sort of projects, like: full CMS websites, database-driven web applications, REST-driven front-end applications and simple CRUD applications.</p>
+
+            <p><b>Frontend development:</b> I'm glad to write plain old Javascript or use many of the popular frontend libraries &amp; frameworks out there, especially jQuery. I like to put all together to make compliant, clean, maintainable and responsive HTML5 &amp; CSS3 templates for the clients.</p>
+
+            <p><b>Infrastructure:</b> I manage numerous servers for client projects as well as my own personal site and apps. I have experience with setup, deployment, provisioning and daily maintenance of full server stacks. I like to platforms such as Digital Ocean, preferably with Fedora's Linux distribution.</p>
+
+            <p>I’ve used various flavors of Linux on the desktop: Arch, Fedora, Ubuntu… In the end I realized that once the OS is set up and configured, I spend most of my time in bash and they are all pretty much the same, I still prefers Arch Linux anyways.</p>
+
+            <p><b>Desing and UX:</b> There are some people which are designers and programmers, i am just a program developer.</p>
+          </section>
+
+          <!-- Projects
+          ================================================== -->
+          <section id="projects">
+            <div class="page-header">
+              <h1>Projects &amp; works</h1>
+            </div>
+
+            <h2>Works as employee</h2>
+
+            <p>List of works made while working in Informatica Alcorta as developer.</p>
+
+            <div class="item">
+              <div class="image">
+                <img src="resources/images/capal_logo.png" class="img-thumbnail center-block">
+              </div>
+
+              <div class="text">
+                <h2>C.A.P.A.L.</h2>
+
+                <p>Institutional web site with various contents, among other things allows to view and pay bills online.</p>
+
+                <p>Built on top of Windows's stack, including Umbraco's framework for easy developing.</p>
+
+                <p>Technologies in use: HTML5, CSS3, jQuery, ASP.NET C# and SQL Server.</p>
+              </div>
+            </div>
+
+            <h2>Freelancer works</h2>
+
+            <p>List of works made while working as freelancer.</p>
+
+            <div class="item">
+              <div class="image">
+                <img src="resources/images/fascionata_logo.png" class="img-thumbnail center-block">
+              </div>
+
+              <div class="text">
+                <h2>Fascionata</h2>
+
+                <p>Ecommerce web site.</p>
+
+                <p>Works includes: Web scraping and DB's data manipulation. Also coded WP template modifications and a plugin for easy import of custom values on WooCommerce WP plugin.</p>
+
+                <p>Migration to a private Apache web server, configuration using virtual hosts.</p>
+
+                <p>Built on EC2 instance, Ubuntu OS, PostgreSQL for database and PHP for server side language. Also S3 instance for keeping catalogue images.</p>
+
+                <p>Technologies in use: Linux, Apache, Wordpress, HTML5, PHP, Python and PostgreSQL.</p>
+              </div>
+            </div>
+
+            <h2>Independent/personal projects</h2>
+
+            <p>Personal projects done in my freetime.</p>
+
+            <div class="item">
+              <div class="image">
+                <img src="resources/images/cyanogenmod_logo.png" class="img-thumbnail center-block">
+              </div>
+
+              <div class="text">
+                <h2>Android L CM port</h2>
+
+                <p>Port Android based <a href="http://www.cyanogenmod.org/" target="_blank">Cyanogenmod OS</a> to <a href="http://www.samsung.com/hk_en/consumer/mobile/mobile-phones/smartphone/GT-I9070HKATGY" target="_blank">Samsung Galaxy S Advance device</a>.</p>
+
+                <p>Making a stable port merging propietary blobs with CM base code.</p>
+
+                <p>Technologies in use: Android itself, Linux, C/C++, Java, Bash and Python.</p>
+              </div>
+            </div>
+
             <br/>
 
-            <h3><span class="glyphicon glyphicon-thumbs-up"></span> Backend development:</h3>
-            <p>My best skills are in <strong>.NET</strong> and its associated platform stack, but i am anyways good skilled in <strong>PHP</strong> and <strong>Django</strong>, in conjunction with DBs such as <strong>MySQL</strong> and <strong>PostgreSQL</strong>. I'm comfortable with using all of this tools for all sort of projects, like: full CMS websites, database-driven web applications, REST-driven front-end applications and simple CRUD applications.</p>
-            <br/>
+            <div class="item">
+              <div class="image">
+                <img src="resources/images/noimage_logo.png" class="img-thumbnail center-block">
+              </div>
 
-            <h3><span class="glyphicon glyphicon-thumbs-up"></span> Frontend development:</h3>
-            <p>I'm glad to write plain old <strong>Javascript</strong> or use many of the popular frontend libraries &amp; frameworks out there, especially <strong>jQuery</strong>. I like to put all together to make compliant, clean, maintainable and responsive <strong>HTML5</strong> &amp; <strong>CSS3</strong> templates for the clients.</p>
-            <br/>
+              <div class="text">
+                <h2>IRC bot</h2>
 
-            <h3><span class="glyphicon glyphicon-thumbs-up"></span> Infrastructure:</h3>
-            <p>I manage numerous servers for client projects as well as my own personal site and apps. I have experience with setup, deployment, provisioning and daily maintenance of full server stacks. I like to platforms such as Digital Ocean, preferably with Fedora's Linux distribution.</p>
-            <br/>
+                <p>Bot for Rizon.net IRC server with embedded commands for use with <a href="http://www.erepublik.com/en/referrer/XXCiro">eRepublik</a>'s game.</p>
 
-            <blockquote>I’ve used various flavors of Linux on the desktop: Arch, Fedora, Ubuntu…<br/>In the end I realized that once the OS is set up and configured, I spend most of my time in bash and they are all pretty much the same, I still prefers Arch Linux anyways.</blockquote>
-            <br/>
+                <p>Used as a project to learn Python, socket manipulation &amp; IRC's basics. Also I used this to learn about the Websockets, since this uses it for create a server and communicate with a Greasemonkey's script to join with the internal chat of the game.</p>
 
-            <h3><span class="glyphicon glyphicon-thumbs-down"></span> Desing and UX:</h3>
-            <p>There are some people which are designers and programmers, i am just a program developer.</p>
-          </div><!-- /.home-post -->
-        </div><!-- /.home-main -->
+                <p>Technologies in use: Python, IRC, Websockets, GreaseMonkey and Javascript.</p>
 
-        <div class="col-sm-3 col-sm-offset-1 home-sidebar">
-          <hr class="visible-xs" />
-          
-          <div class="sidebar-module profile">
-            <img class="img-circle center-block" title="Ciro Pedrini's profile image" alt="Ciro Pedrini's profile image" src="resources/images/profile.png" />
-          </div><!-- /.sidebar-module.profile -->
+                <ul class="links">
+                  <li>
+                    <a href="https://github.com/CPedrini/TateTRES" target="_blank"><i class="glyphicon glyphicon-link"></i> GitHub repository</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
-          <div class="sidebar-module">
-            <h4>About me:</h4>
-            <p>
-              <em>My name is Ciro Pedrini and i am currently studying engineering in information systems at the <a href="http://www.frro.utn.edu.ar">National Technological University</a>.</em>
-            </p>
-            <hr/>
-            <p>
-              <em>I like to learn, I like to play, I like to progress.</em>
-            </p>
-          </div><!-- /.sidebar-module -->
-        </div><!-- /.home-sidebar -->
-      </div><!-- /.row -->
-    </div><!-- /.container.main -->
+          <!-- Resources
+          ================================================== -->
+          <section id="resources">
+            <div class="page-header">
+              <h1>Resources</h1>
+            </div>
 
-    <a href="#" class="navbar-toggle back-to-top">
-      <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-    </a>
+            <h2>Presentations</h2>
+            <p>Here are the slides from my presentations that i've used in the past.</p>
+            
+            <h3>AJAX slide</h3>
+            <p>Presentation made together with Lucas Allegri for the college's assignment: Tecnologías de Desarrollo de Software IDE.</p>
+            <p>This covers from the very basic of AJAX to some sorts of implementations of .NET framework available in 2005.</p>
+
+            <ul class="links">
+              <li>
+                <a href="files/ajax_slide.pptx" target="_blank"><i class="glyphicon glyphicon-blackboard"></i> Slide</a>
+              </li>
+              <li>
+                <a href="files/ajax_document.docx" target="_blank"><i class="glyphicon glyphicon-file"></i> Document</a>
+              </li>
+            </ul>
+
+            <h2>Software</h2>
+            <p>Here i have listed various free software that I have developed for my works or personal projects.</p>
+
+            <h3>WooCommerce Product Shortlinks Importer</h3>
+            <p>Plugin for Wordpress that can be used in conjunction with "WooCommerce" for the import of large csv files with "short_link" column.</p>
+
+            <p>Since files could be incredibly long, this uses AJAX to upload the lines to the DB in groups of queries.</p>
+
+            <ul class="links">
+              <li>
+                <a href="https://github.com/CPedrini/woocommerce-prodshort" target="_blank"><i class="glyphicon glyphicon-link"></i> GitHub repository</a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Contact
+          ================================================== -->
+          <section id="contact">
+            <div class="page-header">
+              <h1>Contact</h1>
+            </div>
+
+            <p>Say hello or let's talk!</p>
+
+            <ul class="info">
+              <li>Email: <a href="mailto:ciro.pedrini@gmail.com" target="_blank">ciro.pedrini@gmail.com</a></li>
+              <li>Phone: +54 341 15-3188-464 (also Whatsapp)</li>
+              <li>GitHub: <a href="https://github.com/CPedrini" target="_blank">CPedrini</a></li>
+              <li>Work network: <a href="https://www.freelancer.com/u/CPedrini.html" target="_blank">Freelancer</a> | <a href="http://www.peopleperhour.com/freelancer/ciro/developer-and-programmer/869766" target="_blank">peopleperhour</a></li>
+              <li>Social media: <a href="https://www.facebook.com/CiroPedrini" target="_blank">Facebook</a> | <a href="https://plus.google.com/102653850735814541401" target="_blank">Google+</a> | <a href="https://twitter.com/CiroPedrini" target="_blank">Twitter</a></li>
+            </ul>
+          </section>
+        </div>
+      </div><!--/row-->
+    </div>
 
     <footer class="footer">
       <div class="container">
-        <h4 class="text-muted">Contact at <a href="mailto:ciro.pedrini@gmail.com">ciro.pedrini@gmail.com</a></h4>
-        <hr/>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4">
-            <a href="https://www.facebook.com/CiroPedrini">
-              <img alt="Facebook logo" class="img-responsive center-block" src="resources/images/facebook-footer-logo.png" />
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-4">
-            <a href="https://www.github.com/CPedrini">
-              <img alt="GitHub logo" class="img-responsive center-block" src="resources/images/github-footer-logo.png" />
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-4">
-            <a href="https://www.freelancer.com.es/u/CPedrini.html">
-              <img alt="Freelancer logo" class="img-responsive center-block" src="resources/images/freelancer-footer-logo.png" />
-            </a>
-          </div>
-        </div>
+        <p class="pull-right back-to-top"><a href="#">Back to top</a></p>
+        <p>Last updated: 20 August 2015</p>
+        <p>Contact: <a href="mailto:ciro.pedrini@gmail.com">ciro.pedrini@gmail.com</a></p>
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="vendors/jquery/jquery.min.js"></script>
-    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="vendors/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
 
+    <!-- Custom scripts 
+    ================================================== -->
     <script>
       $(document).ready(function() {
+          $('#nav-menu').affix({
+              offset: {
+                  top: 210
+              }
+          });
+
           var offset = 220;
           var duration = 500;
           jQuery(window).scroll(function() {
